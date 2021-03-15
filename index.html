@@ -1,25 +1,15 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testing</title>
-</head>
-<body>
-    <div>
-        <input name="email" type="email" class="email-style" data-animation="fadeInLeft"  data-delay=".6s"  placeholder= "Email Address" >
-                                    </div>
-                                    <button type="submit" onclick='Form()'>Send  </button>
-    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+		></script>
 
-</body>
-<script
-src="https://code.jquery.com/jquery-3.4.1.js"
-
+  <script
 function Form (){
     $.ajax({
         url:https://api.apispreadsheets.com/data/9539/,
         type:"post",
-        data:$("Email-Form").serializeArray(),
+        data:$("#Email-Form").serializeArray(),
         success: function(){
             alert("Thank you for contacting us. We will get back to you shortly.")
         },
@@ -28,6 +18,19 @@ function Form (){
         }
     });
 }
-</script>
+></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+</head>
+<body>
+    <div>
+        <input name="email" type="email"   placeholder= "Email Address" >
+                                    </div>
+                                    <button type="submit" onclick='Form()'>Send  </button>
+    </div>
+
+</body>
+
 
 </html>

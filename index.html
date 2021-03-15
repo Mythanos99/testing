@@ -6,13 +6,29 @@
 </head>
 <body>
     <div>
-           <form method="POST" action="contact-email.php"></form>
-        <input name="email" type="email"    placeholder= "Email Address" >
+        <input name="email" type="email" class="email-style" data-animation="fadeInLeft"  data-delay=".6s"  placeholder= "Email Address" >
                                     </div>
-  
-    <input type="submit"  value="Connect With Us">
-    </div>
+                                    <button type="submit" onclick='Form()'>Send </button>onclick='Form()'>Send </button>
     </div>
 
 </body>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+></script>
+<script>
+function Form (){
+    $.ajax({
+        url:https://api.apispreadsheets.com/data/9539/,
+        type:"post",
+        data:$("Email-Form").serializeArray(),
+        success: function(){
+            alert("Thank you for contacting us. We will get back to you shortly.")
+        },
+        error: function(){
+            alert("Oops! There was an error :(")
+        }
+    });
+}
+</script>
+
 </html>
